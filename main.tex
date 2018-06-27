@@ -1,0 +1,303 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[english,romanian]{babel}
+\begin{document}
+\begin{titlepage}
+ \begin{figure}
+\includegraphics[width=0.2\textwidth]{sigla}\\
+\end{figure}
+\begin{center}
+    \textsc{\normalsize Universitatea "Ovidius" Constanța\\
+  Facultatea de Matematică și Informatică\\
+  Specializarea Informatică}\\
+  [4cm]
+    {\Large \sc Raport practică: 25.06-06.07.2018}\\[7cm]
+    \begin{flushright} \large
+    \textbf{Student:\ \ \ \ \ } \\
+    Tudorică Anca-Maria
+   \end{flushright}
+  \vfill
+  {\large Constanța}\\
+  {\large Iunie-Iulie 2018}
+ \end{center}
+\end{titlepage}
+
+\tableofcontents
+\chapter{Introducere}
+
+Acest raport cuprinde descrierea activității desfășurate la practică la calculator în perioada 25.06-06.07.2018 în cadrul Facultății de Matematică și Informatică.
+
+\chapter{Activități planificate}
+\begin{itemize}
+\item  Luni, 25.06.2018 \newline
+Aducerea la cunoștință a obiectivelor și cerințelor practicii la calculator.
+\item  Marți, 26.06.2018 \newline
+Am ales tema: "Algoritmul de căutare în adâncime într-un graf".
+\item  Miercuri, 27.06.2018 \newline
+Am studiat și am practicat Latex: am realizat prima pagina a lucrarii și am stabilit activitățile pe care doresc să le parcurg.
+\item  Joi, 28.06.2018 \newline
+Am căutat informații referitoare la grafuri și parcurgerea grafurilor.
+\item  Vineri, 29.06.2018  \newline
+Am rezolvat două exemple pentru căutarea în adâncime  într-un graf.
+\item  Luni, 02.07.2018  \newline
+Am căutat pseudocodul pentru tema aleasa.
+\item  Marți, 03.07.2018  \newline
+Am scris codul în limbajul java.
+\item  Miercuri, 04.07.2018  \newline
+Am verificat funcționalitatea codului. 
+\item  Joi, 05.07.2018  \newline
+Am completat raportul în latex cu etapele pe care le-am parcurs în zilele precedente.
+\item  Vineri, 06.07.2018  \newline
+Prezentarea lucrărilor.
+Notarea finală a activității.
+\end{itemize}
+
+
+\chapter{25.06.2018}
+Am desfăţurat următoarele activităţi:
+\begin{itemize}
+\item
+Am identificat sursele pentru MikTeX, Git, SmartGit și BitBucket.
+\begin{itemize}
+\item
+Am identificat sursele pentru MikTeX, Git, SmartGit și BitBucket.
+\item
+Am instalat, configurat pe calculatorul de lucru aplicațiile necesare:
+\begin{itemize}
+\item
+MikTeX
+\item
+SmartGit
+\item
+Bitbucket
+\end{itemize}
+\item
+Am instalat, configurat pe calculatorul de lucru aplicațiile necesare:
+\begin{itemize}
+\item
+MikTeX
+\item
+SmartGit
+\item
+Bitbucket
+\end{itemize}
+\end{itemize}
+\end{itemize}
+Studierea obiectivelor și cerințelor față de practica de producție. Clarificarea situațiilor incerte.
+
+
+\chapter{26.06.2018}
+Am ales tema: "Algoritmul de cautare în adancime într-un graf".
+\chapter{27.06.2018}
+Am studiat și am practicat Latex: am realizat prima pagina a lucrarii și am stabilit activitătile pe care doresc să le parcurg.
+
+\chapter{28.06.2018}
+
+Căutarea sau parcurgerea în adâncime este un algoritm pentru parcurgerea sau căutarea într-o structură de date de tip \underline{arbore} sau \underline{graf}. Se începe de la \underline{rădăcină} și se explorează cât mai mult posibil de-a lungul fiecărei ramuri înainte de a face pași înapoi.
+
+Prin parcurgerea unui graf se întelege "vizitarea" vârfurilor sale într-o anumita ordine, data de un anumit criteriu.
+
+Exista doi algoritmi de parcurgere  a grafurilor:
+\begin{itemize}
+\item algoritmul de parcurgere în adâncime BF;
+\item algoritmul de parcurgere în lățime DF.
+\end{itemize}
+\begin{enumerate}
+\item    Algoritmul de parcurgere în adâncime BF \newline
+În toate cele trei tipuri de parcurgere în adâncime se vizitează mai întâi subarborele stâng, apoi subarborele drept. Diferenţa constă în poziţia rădăcinii faţă de cei doi subarbori. Fie scrise recursiv, fie iterativ, procedurile de parcurgere în adâncime necesită o stivă.
+              Clasificarea tipurilor de parcurgere în adâncime:
+              \begin{itemize}
+             \item Preordine (rsd):
+             Pentru a parcurge un arbore binar în preordine, se vizitează mai întâi rădăcina, se parcurge în preordine subarborele stâng, apoi se parcurge în preordine subarborele drept.
+            \item Inordine (srd):
+            Pentru a parcurge în inordine un arbore binar, se parcurge în inordine subarborele stâng, se vizitează radăcina, apoi se parcurge în inordine subarborele drept.
+
+            \item Postordine (sdr):
+            Pentru a parcurge în postordine un arbore binar, se parcurge în postordine subarborele stâng, apoi cel drept, apoi se vizitează rădăcina.
+
+\end{itemize}
+\item Algoritmul de parcurgere în lățime DF \\
+ Parcurgerea în lăţime începe cu vârful iniţial, denumit şi vârful de start. Se vizitează mai întâi vârful de start. Se vizitează în ordine toţi vecinii nevizitaţi ai vârfului de start.  Apoi se vizitează în ordine toţi vecinii nevizitaţi ai vecinilor vârfului de start şi aşa mai departe, până la epuizarea tuturor vârfurilor accesibile din vârful de start.
+\end{enumerate}
+
+\chapter{29.06.2018}
+Am rezolvat două exemple pentru cautarea în adâncime  într-un graf.
+Exemplu: 
+Se da graful: \newline
+\begin{figure}[ht]
+\centering
+\includegraphics[width=5cm]{graf}
+\caption{Graf neorinetat}
+\end{figure}
+Care este parcurgerea in adancime a grafului?\newline
+Parcurgerea în preordine a arborelui din Figura 7.1 este: 1 2 4 5 3 6 7 8. \newline
+Parcurgerea în inordine a arborelui din Figura 7.1 este: 4 2 5 1 6 3 7 8. \newline
+Parcurgerea în postordine a arborelui din Figura 7.1 este: 4 5 2 6 8 7 3 1. 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=5cm]{graf2}
+\caption{Graf orientat}
+\end{figure}
+\newline
+Parcurgerea în adâncime a grafurlui din Figura 7.2 este: 40, 20, 50, 70, 60, 30, 10.
+
+\chapter{02.07.2018}
+Am căutat pseudocodul pentru tema aleasa.\newline
+\hspace*{0.5cm}Intrare: Un graf G și un nod v din G\newline
+\hspace*{0.5cm}Ieșire: Toate nodurile accesibile din v etichetate pe măsură ce sunt descoperite\newline
+\hspace*{0.5cm}O implementare recursivă a lui DFS:\newline
+\begin{enumerate}
+\item procedure DFS(G,v):
+\item  etichetează v ca descoperit
+\item  for all muchie de la v la w in G.adjacentEdges(v) do
+\item    \hspace*{1cm} nodul w nu este etichetat ca descoperit then
+\item     \hspace{1cm}apelează recursiv DFS(G,w)
+\end{enumerate}
+\hspace*{0.5cm}Ordinea în care nodurile sunt descoperite prin acest algoritm se numește \underline{ordine lexigrafică}.
+
+\chapter{03.07.2018}
+Am scris codul în limbajul java în NetBeans:
+\newline
+package org.arpit.java2blog;\newline
+import java.util.ArrayList;\newline
+import java.util.List;\newline
+import java.util.Stack;\newline
+\newline
+public class DepthFirstSearchExampleNeighbourList\newline
+\{
+ 
+	static class Node
+    
+	\{\newline
+		\hspace*{1cm} int data;\newline
+		\hspace*{1cm}boolean visited;\newline
+		\hspace*{1cm}List\textless Node \textgreater neighbours;\newline
+ \newline
+		\hspace*{1cm}Node(int data)\newline
+		\hspace*{1cm}\{\newline
+			\hspace*{1.5cm}this.data=data;\newline
+			\hspace*{1.5cm}this.neighbours=new ArrayList\textless \textgreater();\newline
+		\hspace*{1cm}\}\newline
+		\hspace*{1cm}public void addneighbours(Node neighbourNode)\{\newline
+			\hspace*{1,5cm}this.neighbours.add(neighbourNode);\newline
+		\hspace*{1cm}\}\newline
+		\hspace*{1cm}public List \textless Node \textgreater getNeighbours() \{\newline
+			\hspace*{1,5cm}return neighbours;\newline
+		\hspace*{1cm}\}\newline
+		\hspace*{1cm}public void setNeighbours(List\textless Node\textgreater neighbours) \{\newline
+			\hspace*{1,5cm}this.neighbours = neighbours;\newline
+		\hspace*{1cm}\}
+        
+        \}
+\newline        
+ 
+
+	// Recursive DFS\newline
+	public  void dfs(Node node)\newline
+	\{\newline
+    	\hspace*{0.8cm}System.out.print(node.data + " ");\newline
+		\hspace*{0.8cm}List \textless Node \textgreater neighbours=node.getNeighbours();\newline
+        \hspace*{0.8cm}node.visited=true;\newline
+		\hspace*{0.8cm}for (int i = 0; i \textless neighbours.size(); i++) \{\newline
+			\hspace*{1cm}Node n=neighbours.get(i);\newline
+			\hspace*{1cm}if(n!=null \&\&  !n.visited)\newline
+			\hspace*{1cm}\{\newline
+				\hspace*{1.5cm}dfs(n);\newline
+			\hspace*{1cm}\}\newline
+		\hspace*{0.8cm}\}\newline
+	\}\newline
+ \newline
+	// Iterative DFS using stack\newline
+	public  void dfsUsingStack(Node node)\newline
+	\{\newline
+		\hspace*{0.8cm}Stack \textless Node \textgreater stack=new  Stack\textless Node \textgreater ();\newline
+		\hspace*{0.8cm}stack.add(node);\newline
+		\hspace*{0.8cm}node.visited=true;\newline
+		\hspace*{0.8cm}while (!stack.isEmpty())\newline
+		\hspace*{0.8cm}\{\newline
+			\hspace*{1cm}Node element=stack.pop();\newline
+			\hspace*{1cm}System.out.print(element.data + " ");\newline
+ 			\hspace*{1cm}List \textless Node \textgreater neighbours=element.getNeighbours();\newline
+			\hspace*{1cm}for (int i = 0; i \textless neighbours.size(); i++) \{\newline
+				\hspace*{1.5cm}Node n=neighbours.get(i);\newline
+				\hspace*{1.5cm}if(n!=null \&\& !n.visited)\newline
+				\hspace*{1.5cm}\{\newline
+					\hspace*{2cm}stack.add(n);\newline
+					\hspace*{2cm}n.visited=true;\newline
+ 				\hspace*{1.5cm}\}\newline
+			\hspace*{1cm}\}\newline
+		\hspace*{0.8cm}\}\newline
+	\}\newline
+ 	\hspace*{0.8cm}public static void main(String arg[])\newline
+	\hspace*{0.8cm}\{ \newline
+		\hspace*{1cm}Node node40 =new Node(40);\newline
+		\hspace*{1cm}Node node10 =new Node(10);\newline
+		\hspace*{1cm}Node node20 =new Node(20);\newline
+		\hspace*{1cm}Node node30 =new Node(30);\newline
+		\hspace*{1cm}Node node60 =new Node(60);\newline
+		\\hspace*{1cm}Node node50 =new Node(50);\newline
+		\hspace*{1cm}Node node70 =new Node(70);\newline
+ 		\hspace*{1cm}node40.addneighbours(node10);\newline
+		\hspace*{1cm}node40.addneighbours(node20);\newline
+		\hspace*{1cm}node10.addneighbours(node30);\newline
+        \hspace*{1cm}node20.addneighbours(node10);\newline
+		\hspace*{1cm}node20.addneighbours(node30);\newline
+		\hspace*{1cm}node20.addneighbours(node60);\newline
+		\hspace*{1cm}node20.addneighbours(node50);\newline
+		\hspace*{1cm}node30.addneighbours(node60);\newline
+		\hspace*{1cm}node60.addneighbours(node70);\newline
+		\hspace*{1cm}node50.addneighbours(node70);\newline
+ 		\hspace*{1cm}DepthFirstSearchExampleNeighbourList dfsExample = new DepthFirstSearchExampleNeighbourList();\newline
+ 		\hspace*{1cm}System.out.println("The DFS traversal of the graph using stack ");\newline
+		\hspace*{1cm}dfsExample.dfsUsingStack(node40);\newline
+ 		\hspace*{1cm}System.out.println();\newline
+ 		\hspace*{1cm}// Resetting the visited flag for nodes\newline
+		\hspace*{1cm}node40.visited=false;\newline
+		\hspace*{1cm}node10.visited=false;\newline
+		\hspace*{1cm}node20.visited=false;\newline
+		\hspace*{1cm}node30.visited=false;\newline
+        \hspace*{1cm}node60.visited=false;\newline
+		\hspace*{1cm}node50.visited=false;\newline
+		\hspace*{1cm}node70.visited=false;\newline
+  		\hspace*{1cm}System.out.println("The DFS traversal of the graph using recursion ");\newline
+		\hspace*{1cm}dfsExample.dfs(node40);\newline
+	\hspace*{0.8cm}\}\newline 
+\}
+\chapter{04.07.2018}
+Am verificat functionalitatea codului. \newline
+Codul implementat in NetBeans:
+\begin{figure}[ht]
+  \hspace*{1.5cm}\subfloat[1]{\includegraphics[width=5cm]{1}} 
+  \hspace*{1.5cm}\subfloat[2]{\includegraphics[width=5cm]{2}}\newline
+  \hspace*{1.5cm}\subfloat[3]{\includegraphics[width=5cm]{3}}
+  \hspace*{1.5cm}\subfloat[4]{\includegraphics[width=5cm]{4}}
+\end{figure}
+
+Rezultatul exemplului din Figura 7.2.:
+\begin{figure}[ht]
+\centering
+\includegraphics[width=10cm]{5}
+\caption{Exemplul din Figura 7.2.}
+\end{figure}
+
+\chapter{05.07.2018}
+Am completat raportul în latex cu etapele pe care le-am parcurs în zilele precedente.
+\chapter{06.07.2018}
+Prezentarea proiectului.
+Notarea finală a activității.
+
+\chapter{Concluzii}
+\hspace*{0.3cm} Am invățat să lucrez cu Latex și Git. În latex am învățat să scriu cu diacritice cu ajutorul pachetele  ``$\backslash$usepackeage$\{$ucs$\}$'' si ``$\backslash usepackage[english,romanian]$\{babel$\}$'', să realizez un cuprins ``$\backslash tableofcontents$'', să folosesc diferite liste ``$\backslash begin\{itemize\}$''... ``$\backslash end\{itemize\}$'' sau ``$\backslash begin\{enumerate\}$''...``$\backslash end\{enumerate\}$'', să inserez poze cu pachetul ``$\backslash usepackage\{graphicx\}$'' și instructiunea ``$\backslash  includegraphicx[]\{\}$'' și să realizez o bibliografie cu BibTex.
+
+Pentru crearea raportului am utilizat cărțile: \cite{book:2}  și \cite{book:1} și surse online:  \cite{3} si \cite{4}. 
+
+ 
+\newpage
+\bibliography{bibliografie} 
+\bibliographystyle{plain}
+
+\end{document}
