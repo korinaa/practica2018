@@ -62,6 +62,33 @@ Am ales tema: "Algoritmul de cautare în adancime într-un graf".
 \chapter{27.06.2018}
 Am studiat și am practicat Latex: am realizat prima pagina a lucrarii și am stabilit activitătile pe care doresc să le parcurg.
 
+\chapter{28.06.2018}
 
+Căutarea sau parcurgerea în adâncime este un algoritm pentru parcurgerea sau căutarea într-o structură de date de tip \underline{arbore} sau \underline{graf}. Se începe de la \underline{rădăcină} și se explorează cât mai mult posibil de-a lungul fiecărei ramuri înainte de a face pași înapoi.
+
+Prin parcurgerea unui graf se întelege "vizitarea" vârfurilor sale într-o anumita ordine, data de un anumit criteriu.
+
+Exista doi algoritmi de parcurgere  a grafurilor:
+\begin{itemize}
+\item algoritmul de parcurgere în adâncime BF;
+\item algoritmul de parcurgere în lățime DF.
+\end{itemize}
+\begin{enumerate}
+\item    Algoritmul de parcurgere în adâncime BF \newline
+În toate cele trei tipuri de parcurgere în adâncime se vizitează mai întâi subarborele stâng, apoi subarborele drept. Diferenţa constă în poziţia rădăcinii faţă de cei doi subarbori. Fie scrise recursiv, fie iterativ, procedurile de parcurgere în adâncime necesită o stivă.
+              Clasificarea tipurilor de parcurgere în adâncime:
+              \begin{itemize}
+             \item Preordine (rsd):
+             Pentru a parcurge un arbore binar în preordine, se vizitează mai întâi rădăcina, se parcurge în preordine subarborele stâng, apoi se parcurge în preordine subarborele drept.
+            \item Inordine (srd):
+            Pentru a parcurge în inordine un arbore binar, se parcurge în inordine subarborele stâng, se vizitează radăcina, apoi se parcurge în inordine subarborele drept.
+
+            \item Postordine (sdr):
+            Pentru a parcurge în postordine un arbore binar, se parcurge în postordine subarborele stâng, apoi cel drept, apoi se vizitează rădăcina.
+
+\end{itemize}
+\item Algoritmul de parcurgere în lățime DF \\
+ Parcurgerea în lăţime începe cu vârful iniţial, denumit şi vârful de start. Se vizitează mai întâi vârful de start. Se vizitează în ordine toţi vecinii nevizitaţi ai vârfului de start.  Apoi se vizitează în ordine toţi vecinii nevizitaţi ai vecinilor vârfului de start şi aşa mai departe, până la epuizarea tuturor vârfurilor accesibile din vârful de start.
+\end{enumerate}
 
 \end{document}
