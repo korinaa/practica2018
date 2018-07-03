@@ -98,4 +98,18 @@ Exista doi algoritmi de parcurgere  a grafurilor:
  Parcurgerea în lăţime începe cu vârful iniţial, denumit şi vârful de start. Se vizitează mai întâi vârful de start. Se vizitează în ordine toţi vecinii nevizitaţi ai vârfului de start.  Apoi se vizitează în ordine toţi vecinii nevizitaţi ai vecinilor vârfului de start şi aşa mai departe, până la epuizarea tuturor vârfurilor accesibile din vârful de start.
 \end{enumerate}
 
+\chapter{02.07.2018}
+Am căutat pseudocodul pentru tema aleasa.\newline
+\hspace*{0.5cm}Intrare: Un graf G și un nod v din G\newline
+\hspace*{0.5cm}Ieșire: Toate nodurile accesibile din v etichetate pe măsură ce sunt descoperite\newline
+\hspace*{0.5cm}O implementare recursivă a lui DFS:\newline
+\begin{enumerate}
+\item procedure DFS(G,v):
+\item  etichetează v ca descoperit
+\item  for all muchie de la v la w in G.adjacentEdges(v) do
+\item    \hspace*{1cm} nodul w nu este etichetat ca descoperit then
+\item     \hspace{1cm}apelează recursiv DFS(G,w)
+\end{enumerate}
+\hspace*{0.5cm}Ordinea în care nodurile sunt descoperite prin acest algoritm se numește \underline{ordine lexigrafică}.
+
 \end{document}
