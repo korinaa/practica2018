@@ -111,7 +111,114 @@ Am căutat pseudocodul pentru tema aleasa.\newline
 \item     \hspace{1cm}apelează recursiv DFS(G,w)
 \end{enumerate}
 \hspace*{0.5cm}Ordinea în care nodurile sunt descoperite prin acest algoritm se numește \underline{ordine lexigrafică}.
+\chapter{03.07.2018}
+Am scris codul în limbajul java în NetBeans:
+\newline
+package org.arpit.java2blog;\newline
+import java.util.ArrayList;\newline
+import java.util.List;\newline
+import java.util.Stack;\newline
+\newline
+public class DepthFirstSearchExampleNeighbourList\newline
+\{
+ 
+	static class Node
+    
+	\{\newline
+		\hspace*{1cm} int data;\newline
+		\hspace*{1cm}boolean visited;\newline
+		\hspace*{1cm}List\textless Node \textgreater neighbours;\newline
+ \newline
+		\hspace*{1cm}Node(int data)\newline
+		\hspace*{1cm}\{\newline
+			\hspace*{1.5cm}this.data=data;\newline
+			\hspace*{1.5cm}this.neighbours=new ArrayList\textless \textgreater();\newline
+		\hspace*{1cm}\}\newline
+		\hspace*{1cm}public void addneighbours(Node neighbourNode)\{\newline
+			\hspace*{1,5cm}this.neighbours.add(neighbourNode);\newline
+		\hspace*{1cm}\}\newline
+		\hspace*{1cm}public List \textless Node \textgreater getNeighbours() \{\newline
+			\hspace*{1,5cm}return neighbours;\newline
+		\hspace*{1cm}\}\newline
+		\hspace*{1cm}public void setNeighbours(List\textless Node\textgreater neighbours) \{\newline
+			\hspace*{1,5cm}this.neighbours = neighbours;\newline
+		\hspace*{1cm}\}
+        
+        \}
+\newline        
+ 
 
+	// Recursive DFS\newline
+	public  void dfs(Node node)\newline
+	\{\newline
+    	\hspace*{0.8cm}System.out.print(node.data + " ");\newline
+		\hspace*{0.8cm}List \textless Node \textgreater neighbours=node.getNeighbours();\newline
+        \hspace*{0.8cm}node.visited=true;\newline
+		\hspace*{0.8cm}for (int i = 0; i \textless neighbours.size(); i++) \{\newline
+			\hspace*{1cm}Node n=neighbours.get(i);\newline
+			\hspace*{1cm}if(n!=null \&\&  !n.visited)\newline
+			\hspace*{1cm}\{\newline
+				\hspace*{1.5cm}dfs(n);\newline
+			\hspace*{1cm}\}\newline
+		\hspace*{0.8cm}\}\newline
+	\}\newline
+ \newline
+	// Iterative DFS using stack\newline
+	public  void dfsUsingStack(Node node)\newline
+	\{\newline
+		\hspace*{0.8cm}Stack \textless Node \textgreater stack=new  Stack\textless Node \textgreater ();\newline
+		\hspace*{0.8cm}stack.add(node);\newline
+		\hspace*{0.8cm}node.visited=true;\newline
+		\hspace*{0.8cm}while (!stack.isEmpty())\newline
+		\hspace*{0.8cm}\{\newline
+			\hspace*{1cm}Node element=stack.pop();\newline
+			\hspace*{1cm}System.out.print(element.data + " ");\newline
+ 			\hspace*{1cm}List \textless Node \textgreater neighbours=element.getNeighbours();\newline
+			\hspace*{1cm}for (int i = 0; i \textless neighbours.size(); i++) \{\newline
+				\hspace*{1.5cm}Node n=neighbours.get(i);\newline
+				\hspace*{1.5cm}if(n!=null \&\& !n.visited)\newline
+				\hspace*{1.5cm}\{\newline
+					\hspace*{2cm}stack.add(n);\newline
+					\hspace*{2cm}n.visited=true;\newline
+ 				\hspace*{1.5cm}\}\newline
+			\hspace*{1cm}\}\newline
+		\hspace*{0.8cm}\}\newline
+	\}\newline
+ 	\hspace*{0.8cm}public static void main(String arg[])\newline
+	\hspace*{0.8cm}\{ \newline
+		\hspace*{1cm}Node node40 =new Node(40);\newline
+		\hspace*{1cm}Node node10 =new Node(10);\newline
+		\hspace*{1cm}Node node20 =new Node(20);\newline
+		\hspace*{1cm}Node node30 =new Node(30);\newline
+		\hspace*{1cm}Node node60 =new Node(60);\newline
+		\\hspace*{1cm}Node node50 =new Node(50);\newline
+		\hspace*{1cm}Node node70 =new Node(70);\newline
+ 		\hspace*{1cm}node40.addneighbours(node10);\newline
+		\hspace*{1cm}node40.addneighbours(node20);\newline
+		\hspace*{1cm}node10.addneighbours(node30);\newline
+        \hspace*{1cm}node20.addneighbours(node10);\newline
+		\hspace*{1cm}node20.addneighbours(node30);\newline
+		\hspace*{1cm}node20.addneighbours(node60);\newline
+		\hspace*{1cm}node20.addneighbours(node50);\newline
+		\hspace*{1cm}node30.addneighbours(node60);\newline
+		\hspace*{1cm}node60.addneighbours(node70);\newline
+		\hspace*{1cm}node50.addneighbours(node70);\newline
+ 		\hspace*{1cm}DepthFirstSearchExampleNeighbourList dfsExample = new DepthFirstSearchExampleNeighbourList();\newline
+ 		\hspace*{1cm}System.out.println("The DFS traversal of the graph using stack ");\newline
+		\hspace*{1cm}dfsExample.dfsUsingStack(node40);\newline
+ 		\hspace*{1cm}System.out.println();\newline
+ 		\hspace*{1cm}// Resetting the visited flag for nodes\newline
+		\hspace*{1cm}node40.visited=false;\newline
+		\hspace*{1cm}node10.visited=false;\newline
+		\hspace*{1cm}node20.visited=false;\newline
+		\hspace*{1cm}node30.visited=false;\newline
+        \hspace*{1cm}node60.visited=false;\newline
+		\hspace*{1cm}node50.visited=false;\newline
+		\hspace*{1cm}node70.visited=false;\newline
+  		\hspace*{1cm}System.out.println("The DFS traversal of the graph using recursion ");\newline
+		\hspace*{1cm}dfsExample.dfs(node40);\newline
+	\hspace*{0.8cm}\}\newline 
+\}
 
 \chapter{04.07.2018}
 Am verificat functionalitatea codului. \newline
